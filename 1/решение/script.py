@@ -11,6 +11,10 @@ else:
 
 ticket = 123321
 
+# convert number to string
+print("Счастливый билет" if (sum(map(int, str(ticket)[:3])) == sum(
+    map(int, str(ticket)[3:]))) else "Несчастливый билет")
+
 if (ticket // 100000 + ticket // 10000 % 10 + ticket // 1000 % 10 == ticket // 100 % 10 + ticket // 10 % 10 + ticket % 10):
     print("Счастливый билет")
 else:
