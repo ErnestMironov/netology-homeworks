@@ -3,31 +3,26 @@ import time
 
 
 def formula_1(x):
-    """Вычисление по формуле 1."""
     return x**2 - x**2 + x**4 - x**5 + x + x
 
 
 def formula_2(x):
-    """Вычисление по формуле 2."""
     return x + x
 
 
 def compute_formula_1(iterations, results):
-    """Вычисление по формуле 1 и сохранение результата."""
     start_time = time.time()
     results['formula_1'] = [formula_1(i) for i in range(iterations)]
     results['time_formula_1'] = time.time() - start_time
 
 
 def compute_formula_2(iterations, results):
-    """Вычисление по формуле 2 и сохранение результата."""
     start_time = time.time()
     results['formula_2'] = [formula_2(i) for i in range(iterations)]
     results['time_formula_2'] = time.time() - start_time
 
 
 def perform_computations(iterations):
-    """Выполнение вычислений для заданного числа итераций."""
     results = {}  # Для хранения результатов и времени выполнения
 
     # Создание и запуск потоков для формул 1 и 2
